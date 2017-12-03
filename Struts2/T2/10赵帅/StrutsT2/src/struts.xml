@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+
+<struts>
+	<package name="condas" extends="struts-default">
+	<interceptors>
+		<interceptor name="print" class="com.zs.t2.interceptor.CheckRight"></interceptor>
+	</interceptors>
+		<action name="login" class="com.zs.t2.action.LoginAction">
+			<interceptor-ref name="timer"></interceptor-ref>
+			<interceptor-ref name="print"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/jsp/t2.jsp</result>
+		</action>
+	</package>
+</struts>
