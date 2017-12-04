@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+<struts>
+  <package name="usermanager" extends="struts-default">
+     <!-- 用户管理 -->
+     <action name="user" class="com.rcc.UserAction">
+        <result name="list">/userlist.jsp</result>
+        <result name="tolist" type="redirectAction">user!list</result>
+        <result name="update">/userupdate.jsp</result>
+        <result name="input">/useradd.jsp</result>
+     </action>
+  </package>
+</struts>
+</xml-body>
