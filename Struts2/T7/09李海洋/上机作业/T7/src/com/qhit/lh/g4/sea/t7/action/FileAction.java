@@ -65,14 +65,14 @@ public class FileAction extends ActionSupport {
 		}
 		return "success";
 	}
-	private String  download() throws Exception{
-		if (downloadfileName!=null) {
-			String path = ServletActionContext.getServletContext().getRealPath("/upload")+downloadfileName;
-			downloadfile = new FileInputStream(path);
-			return "down";
-		}
-		return null;
-	}
+//	private String  download() throws Exception{
+//		if (downloadfileName!=null) {
+//			String path = ServletActionContext.getServletContext().getRealPath("/upload")+downloadfileName;
+//			downloadfile = new FileInputStream(path);
+//			return "down";
+//		}
+//		return null;
+//	}
 	public String getDownloadfileName() {
 		return downloadfileName;
 	}
