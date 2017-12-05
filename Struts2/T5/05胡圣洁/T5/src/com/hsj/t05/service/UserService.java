@@ -1,0 +1,14 @@
+package com.hsj.t05.service;
+
+import java.util.List;
+
+import com.hsj.t05.bean.User;
+
+public interface UserService {
+
+	public int addUser(User user);
+	public int updateUser(User user);
+	public int deleteUser(int uid);
+	public List<User> queryAllUser();
+	public User querySingleUser(int uid);
+}
