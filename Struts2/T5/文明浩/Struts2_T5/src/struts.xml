@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"struts-2.1.dtd">
+	<struts>	
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
+	<constant name="struts.custom.i18n.resources" value="Message"></constant>	
+	<package name="demo" extends="struts-default">		
+		<action name="helloAction" class="com.tsing.action.LanguageAction">
+			<result>addstu.jsp</result>
+		</action>
+		<action name="studentAction" class="com.tsing.action.StudentAction">
+			<!-- 验证失败后,默认转到input所指向的资源 -->
+			<result name="input">addstu.jsp</result>
+			<result name="add_student">suc.jsp</result>
+		
+		</action>
+		
+	</package>
+	
+	</struts>
+	
