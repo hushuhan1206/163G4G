@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.sea.t1.bean.User" table="tb_user">
+		<id name="userId" column="userId" type="integer">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="userName" column="userName" type="string"></property>
+		<property name="userPassword" column="userPassword" type="string"></property>
+		<property name="userSex" column="userSex" type="string"></property>
+		<property name="userAge" column="userAge" type="integer"></property>
+		<property name="phone" column="phone" type="string"></property>
+		<property name="QQ" column="QQ" type="string"></property>
+		<property name="address" column="address" type="string"></property>
+	</class>
+</hibernate-mapping>
+
+	
