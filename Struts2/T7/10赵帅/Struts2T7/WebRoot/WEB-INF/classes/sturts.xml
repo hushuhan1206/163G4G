@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+    <struts>
+    	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    	<constant name="struts.multipart.maxSize" value="10485760" />
+    
+    	<package name="filename" extends="struts-default">
+    		<action name="file" class="com.qhit.lh.g4.zs.t7.action.UploadAction">
+    			<interceptor-ref name="defaultStack">
+    				<param name="fileUpload.allowwdExtensions">.txt,.zip,.jpg,.png</param>
+    				<param name="fileUpload.maximumSize">10241024</param>
+    			</interceptor-ref>
+    			<result name="uploadSuccess">/jsp/info.jsp</result>
+    			<result name="input">/index.jsp</result>
+    		</action>
+    	</package>
+    </struts>

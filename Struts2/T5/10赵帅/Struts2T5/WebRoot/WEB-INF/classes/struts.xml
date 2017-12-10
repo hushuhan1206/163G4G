@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+    <struts>
+    	<package name="T6"  extends="struts-default" namespace="/user">
+    		<action name="add" class="com.zs.t5.action.UserAction" method="add">
+    			<result name="useradd">/jsp/result.jsp</result>
+    		</action>
+			<action name="del" class="com.zs.t5.action.UserAction" method="del">
+				<result name="userdel">/jsp/result.jsp</result>
+			</action>
+			<action name="update" class="com.zs.t5.action.UserAction" method="update">
+				<result name="userupdate">/jsp/update.jsp</result>
+			</action>
+			<action name="select" class="com.zs.t5.action.UserAction" method="select">
+				<result name="userselect">/jsp/result.jsp</result>
+			</action>
+    	</package>
+    </struts>
