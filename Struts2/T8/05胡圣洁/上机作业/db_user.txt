@@ -1,0 +1,14 @@
+create database db_user;
+use db_user;
+go
+create table t_user(
+	userId int primary key not null,	--用户ID
+	userName varchar(20) not null,	--用户名称
+	userPassword varchar(20) not null,	--用户密码
+	userSex varchar(1) not null,	--用户性别
+	userAge int check(userAge>0 and userAge <120),	--用户年龄
+	telephone varchar(15) not null,	--用户电话
+	address varchar(50) not null,	--用户地址
+	pic varchar(100) not null,	--用户头像
+	type int not null	--用户类型
+)

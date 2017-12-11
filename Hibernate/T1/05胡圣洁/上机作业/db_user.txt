@@ -1,0 +1,11 @@
+create database db_user;
+use db_user;
+go
+create table t_user(
+	uid int primary key not null,	
+	name varchar(20) not null,	
+	password varchar(20) not null,
+        birthday varchar(15) not null,	
+	sex int not null,	
+	isable varchar(15) not null,	
+)
