@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.sea.t2.bean.Emp" table="emp">
+		<id name="eid" column="eid" type="integer">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="ename" column="ename" type="string"></property>
+		<property name="esex" column="esex" type="string"></property>
+		<property name="ebirth" column="ebirth" type="date"></property>
+		
+		<one-to-one name="empInfo" class="com.qhit.lh.g4.sea.t2.bean.EmpInfo" cascade="all"></one-to-one>
+	</class>
+</hibernate-mapping>
