@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 启用动态方法的调用 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <!-- 国际化资源文件名称 -->  
+    <constant name="struts.custom.i18n.resources" value="global" />  
+    <!-- 是否自动加载国际化资源文件  -->  
+    <constant name="struts.i18n.reload" value="true" /> 
+    <!-- 编码格式 -->  
+    <constant name="struts.i18n.encoding" value="UTF-8" /> 
+	
+	<package name="usermanage" namespace="/" extends="struts-default">
+	
+		<action name="local" class="com.sea.t6.action.LocalAction">
+        	<result name="success">/index.jsp</result>
+        </action>
+   		
+   		<!-- 使用通配符配置action -->
+   		<action name="*User" class="com.sea.t6.action.LoginAcion" method="{1}">
+   			<result name="success">/jsp/success.jsp</result>
+   			<result name="input">/index.jsp</result>
+   		</action>
+	</package>
+
+</struts>
