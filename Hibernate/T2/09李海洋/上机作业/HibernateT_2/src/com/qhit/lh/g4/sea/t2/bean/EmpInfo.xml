@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.sea.t2.bean.EmpInfo" table="empInfo">
+		<id name="id" column="id" type="integer">
+			<generator class="foreign">
+				<param name="property">emp</param>
+			</generator>
+		</id>
+		
+		<property name="name" column="name" type="string"></property>
+		<property name="pwd" column="pwd" type="string"></property>
+		
+		<one-to-one name="emp" class="com.qhit.lh.g4.sea.t2.bean.Emp" ></one-to-one>
+	</class>
+</hibernate-mapping>
