@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.qhit.lh.g4.chen.t2.bean.Emp" table="t_emp">
+<id name="Eid" column="Eid" type="integer">
+<generator class="native">
+
+</generator>
+</id>
+<property name="Ename" column="Ename" type="string" ></property>
+<property name="Sex" column="Sex" type="string" ></property>
+<property name="birthday" column="birthday" type="string" ></property>
+
+<property name="deptId" type="integer" insert="false" update="false">
+<column name="deptId" not-null="true"></column>
+</property>
+
+<one-to-one name="UserInfo" class="com.qhit.lh.g4.chen.t2.bean.UserInfo" cascade="all"></one-to-one>
+<many-to-one name="dept" class="com.qhit.lh.g4.chen.t2.bean.Dept" column="deptId" lazy="false"></many-to-one>
+</class>
+</hibernate-mapping>
