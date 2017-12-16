@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.xjl.t4.bean.User" table="t_emp">
+		<id name="eid" column="eid" type="integer">
+			<!--自增方式-->
+			<generator class="native"></generator>
+		</id>
+		<property name="uname" column="uname" type="string"></property>
+		<property name="upwd" column="upwd"  type="string"></property>
+		<property name="edu" column="edu" type="string"></property>
+		<property name="sex" column="sex" type="integer"></property>
+	</class>
+	
+
+</hibernate-mapping>
