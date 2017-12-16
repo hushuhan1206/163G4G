@@ -1,0 +1,51 @@
+package com.qhit.lh.g4.shutu.t3;
+
+import java.util.List;
+
+import com.qhit.lh.g4.shutu.t3.been.Dept;
+import com.qhit.lh.g4.shutu.t3.been.Emp;
+import com.qhit.lh.g4.shutu.t3.been.Userinfo;
+import com.qhit.lh.g4.shutu.t3.dao.Basedao;
+import com.qhit.lh.g4.shutu.t3.dao.impl.BasedaoImpl;
+
+public class EmpTest {
+	private Basedao basedao =new BasedaoImpl();
+
+public void add(){
+	Emp  emp =new Emp();
+	emp.setEname("shutu");
+	emp.setEsex("n");
+	emp.setEbirthday("1997-09-23");
+	emp.setDept(1);
+	Userinfo userinfo =new Userinfo();
+	userinfo.setUname("mac");
+	userinfo.setUpwd("yun1234");
+	Dept dept=(Dept) basedao.getObjectById(Dept.class, 1);
+	userinfo.setEmp(emp);
+	emp.setUserinfo(userinfo);
+	emp.setDept1(dept);
+	basedao.add(emp);
+}
+
+public void delete(){
+	Emp  emp =new Emp();
+	emp=(Emp) basedao.getObjectById(Emp.class, 1);
+	basedao.delete(emp);
+}
+
+public void update(){
+	Emp emp=(Emp) basedao.getObjectById(Emp.class, 1);
+	Dept dept=(Dept) basedao.getObjectById(Dept.class, 2);
+	emp.setDept1(dept);
+	basedao.update(emp);
+}
+
+public void queryAll(){
+List<Object> lists=	basedao.queryAll("from Emp");
+	for (Object object : lists) {
+		Emp emp=(Emp) object;
+		System.out.println(emp.toString());
+	}
+	
+}
+}
