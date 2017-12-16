@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="helloManger"   extends="struts-default">
+		<interceptors>
+			<interceptor name="MyInterceptor" class="com.qhit.lh.g4.ZWK.T02.interceptor.MyInterceptor"></interceptor>
+		</interceptors>
+		<action name="helloWorld" class="com.qhit.lh.g4.ZWK.T02.action.loginAction">
+			<interceptor-ref name="MyInterceptor"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/JSP/success.jsp</result>
+		</action>
+	</package>
+
+</struts>
