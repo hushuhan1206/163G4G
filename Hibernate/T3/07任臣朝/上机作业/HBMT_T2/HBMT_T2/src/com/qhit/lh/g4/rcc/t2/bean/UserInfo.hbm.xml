@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.rcc.t2.bean.UserInfo" table="t_userInfo" schema="dbo" catalog="db_emp">
+		<!-- 主键 -->
+		<id name="userId" type="java.lang.integer">
+		 <column name="userId"/>
+			<generator class="foreign">
+			  <param name="property">emp</param>
+			</generator>
+		</id>
+
+		<!-- 普通成员 -->
+		<property name="userName" type="java.lang.string">
+		   <column name="userName" length="25" not-null="true"/>
+		</property>
+		<property name="password" type="java.lang.string">
+		   <column name="password" length="25" not-null="true"/>
+		</property>
+		
+		<!-- 一对一 -->
+		<one-to-one name="emp" class="com.qhit.lh.g4.rcc.t2.bean.Emp" cascade="all"></one-to-one>
+	</class>
+</hibernate-mapping>
