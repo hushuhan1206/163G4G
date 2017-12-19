@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+			<class name = "com.qhit.lh.g4.ZWK.HB_T02.bean.UserInfo"  table="tb_userInfo">
+			<!-- 主键映射 -->
+			<id name = "uid" column="uid" type="integer">
+					<generator class="foreign">
+					<!-- 这个emp与员工信息类中关联的员工表的属性一致 -->
+							<param name="property">emp</param>
+					</generator>
+			</id>
+			<!-- 普通字段映射 -->
+			<property name="userName" column="userName" type="string"></property>
+			<property name="userPassword" column="userPassword" type="string"></property>
+			<!-- 与表UserInfo一一对应 -->
+			<one-to-one name="emp" class="com.qhit.lh.g4.ZWK.HB_T02.bean.Emp" cascade="all"></one-to-one>
+	</class>
+
+</hibernate-mapping>
