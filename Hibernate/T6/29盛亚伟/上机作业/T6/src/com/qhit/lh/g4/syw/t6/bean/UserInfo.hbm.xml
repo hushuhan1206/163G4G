@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.syw.t6.bean.UserInfo" table="t_userInfo">
+		<!-- 主键的映射  -->
+		<id name="userId" column="userId" type="integer">
+			<!-- 自增方式 -->
+			<generator class="foreign">
+				<param name="property">emp</param>
+			</generator>
+		</id>
+		<!-- 普通成员属性的映射 -->
+		<property name="userName" column="userName" type="string"></property>
+		<property name="password" column="password" type="string"></property>
+		<!-- 一对一的关系映射 -->
+		<one-to-one name="emp" class="com.qhit.lh.g4.syw.t6.bean.Emp" cascade="all"></one-to-one>
+		<!-- 多对多的关系映射 -->
+		<set name="roles" table="role_user" lazy="false">
+			<key column="userId"></key>
+			<many-to-many class="com.qhit.lh.g4.syw.t6.bean.Role" column="userId"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>
