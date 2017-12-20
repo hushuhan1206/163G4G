@@ -1,0 +1,17 @@
+#MyEclipse Hibernate Properties
+#Wed Dec 20 15:51:13 CST 2017
+genVersionTag=false
+sessionFactoryName=com.qhit.lh.g4.xjl.t6.utils.HibernateSessionFactory
+genAnnotations=false
+configFile=/HBMT6/src/hibernate.cfg.xml
+reStrategyClass=
+sessionFactoryId=
+profile=
+detectM2M=false
+genBasicCompId=false
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+detectO2O=false
+useJavaTypes=true
+reSettingsFile=
