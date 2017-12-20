@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-18 18:54:56 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+<!-- 该类可以通过点击本包，然后右键进行根据提示创建 -->
+    <class name="com.qhit.lh.g4.ZWK.T04.bean.TbUser" table="tb_user">
+      <!-- 主键列 -->
+        <id name="uid" type="java.lang.Integer">
+            <column name="uid" />
+            <generator class="native" />
+        </id>
+        <!-- 普通列 -->
+        <property name="uname" type="java.lang.String">
+            <column name="uname" />
+        </property>
+        <property name="upwd" type="java.lang.String">
+            <column name="upwd" />
+        </property>
+        <property name="sex" type="int">
+            <column name="sex" />
+        </property>
+        <property name="eduction" type="java.lang.String">
+            <column name="eduction" />
+        </property>
+    </class>
+</hibernate-mapping>
