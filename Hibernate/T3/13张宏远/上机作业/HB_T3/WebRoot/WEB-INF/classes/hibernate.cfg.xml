@@ -21,9 +21,9 @@
 		com.microsoft.sqlserver.jdbc.SQLServerDriver
 	</property>
 	<property name="show_sql">true</property>
-	<mapping resource="com/qhit/lh/g4/jer/t3/bean/Dpt.hbm.xml" />
-	<mapping resource="com/qhit/lh/g4/jer/t3/bean/UserInfo.hbm.xml" />
-	<mapping resource="com/qhit/lh/g4/jer/t3/bean/Emp.hbm.xml" />
+	<mapping resource="com/qhit/lh/g4/zhy/T3/bean/Dpt.hbm.xml" />
+	<mapping resource="com/qhit/lh/g4/zhy/T3/bean/UserInfo.hbm.xml" />
+	<mapping resource="com/qhit/lh/g4/zhy/T3/bean/Emp.hbm.xml" />
 
 </session-factory>
 

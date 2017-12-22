@@ -6,7 +6,7 @@
 <!-- Generated 2017-12-15 9:35:55 by Hibernate Tools 5.2.6.Final -->
 <hibernate-mapping>
 
-	<class name="com.qhit.lh.g4.perfact.t3.bean.TUserinfo" table="t_userinfo"
+	<class name="com.qhit.lh.g4.zhy.t4.bean.TUserinfo" table="t_userinfo"
 		optimistic-lock="version">
 
 		<id name="userId" type="int">
@@ -25,7 +25,7 @@
 		<property name="userPwd" type="string">
 			<column name="userPwd" length="30" not-null="true" />
 		</property>
-		<one-to-one name="emp" class="com.qhit.lh.g4.perfact.t3.bean.TEmp" cascade="all"/>
+		<one-to-one name="emp" class="com.qhit.lh.g4.zhy.t4.bean.TEmp" cascade="all"/>
 
 	</class>
 

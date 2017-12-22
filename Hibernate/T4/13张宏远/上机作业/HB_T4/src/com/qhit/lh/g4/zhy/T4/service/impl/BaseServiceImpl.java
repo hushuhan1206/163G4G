@@ -16,7 +16,7 @@ import com.qhit.lh.g4.zhy.T4.service.BaseService;
 public class BaseServiceImpl implements BaseService {
 	private BaseService baseService = new BaseServiceImpl();
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.service.BaseService#add(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.t4.service.BaseService#add(java.lang.Object)
 	 */
 	@Override
 	public void add(Object object) {
@@ -25,7 +25,7 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.service.BaseService#delete(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.t4.service.BaseService#delete(java.lang.Object)
 	 */
 	@Override
 	public void delete(Object object) {
@@ -34,7 +34,7 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.service.BaseService#update(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.t4.service.BaseService#update(java.lang.Object)
 	 */
 	@Override
 	public void update(Object object) {
@@ -43,7 +43,7 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.service.BaseService#queryAll(java.lang.String)
+	 * @see com.qhit.lh.g4.zhy.t4.service.BaseService#queryAll(java.lang.String)
 	 */
 	@Override
 	public List<Object> queryAll(String fromStr) {
@@ -52,7 +52,7 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.service.BaseService#getObjectById(java.lang.Class, int)
+	 * @see com.qhit.lh.g4.zhy.t4.service.BaseService#getObjectById(java.lang.Class, int)
 	 */
 	@Override
 	public Object getObjectById(Class class1, int i) {
