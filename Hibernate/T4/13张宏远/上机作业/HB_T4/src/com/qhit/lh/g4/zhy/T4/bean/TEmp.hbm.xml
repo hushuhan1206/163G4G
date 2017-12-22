@@ -6,7 +6,7 @@
 <!-- Generated 2017-12-15 9:35:55 by Hibernate Tools 5.2.6.Final -->
 <hibernate-mapping>
 
-	<class name="com.qhit.lh.g4.perfact.t3.bean.TEmp" table="t_emp"
+	<class name="com.qhit.lh.g4.zhy.t4.bean.TEmp" table="t_emp"
 		optimistic-lock="version">
 
 		<id name="eid" type="int">
@@ -33,8 +33,8 @@
 		<property name="deptId" type="java.lang.Integer">
 			<column name="deptId" />
 		</property>
-		<one-to-one name="userinfo" class="com.qhit.lh.g4.perfact.t3.bean.TUserinfo" cascade="all"/>
-		<one-to-one name="dept" class="com.qhit.lh.g4.perfact.t3.bean.TDept" lazy="false"/>
+		<one-to-one name="userinfo" class="com.qhit.lh.g4.zhy.t4.bean.TUserinfo" cascade="all"/>
+		<one-to-one name="dept" class="com.qhit.lh.g4.zhy.t4.bean.TDept" lazy="false"/>
 
 	</class>
 

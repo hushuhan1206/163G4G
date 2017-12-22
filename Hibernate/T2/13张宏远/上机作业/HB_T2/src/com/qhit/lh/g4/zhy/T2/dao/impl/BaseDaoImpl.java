@@ -13,7 +13,7 @@ public class BaseDaoImpl implements BaseDao {
 private  Session session =HibernateSessionFactory.getSession();
 private  Transaction ts=session.beginTransaction();
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t02.dao.BaseDao#add(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.T2.dao.BaseDao#add(java.lang.Object)
 	 */
 	@Override
 	public void add(Object object) {
@@ -23,7 +23,7 @@ private  Transaction ts=session.beginTransaction();
 		HibernateSessionFactory.closeSession();
 	}
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t02.dao.BaseDao#delete(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.T2.dao.BaseDao#delete(java.lang.Object)
 	 */
 	@Override
 	public void delete(Object object) {
@@ -33,7 +33,7 @@ private  Transaction ts=session.beginTransaction();
 		HibernateSessionFactory.closeSession();
 	}
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t02.dao.BaseDao#update(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.T2.dao.BaseDao#update(java.lang.Object)
 	 */
 	@Override
 	public void update(Object object) {

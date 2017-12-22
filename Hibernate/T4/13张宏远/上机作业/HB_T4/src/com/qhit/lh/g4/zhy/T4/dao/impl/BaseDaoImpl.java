@@ -24,7 +24,7 @@ public class BaseDaoImpl implements BaseDao {
 	private List<Object> list=new ArrayList<Object>();
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.dao.BaseDao#add(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.t4.dao.BaseDao#add(java.lang.Object)
 	 */
 	@Override
 	public void add(Object object) {
@@ -35,7 +35,7 @@ public class BaseDaoImpl implements BaseDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.dao.BaseDao#delete(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.t4.dao.BaseDao#delete(java.lang.Object)
 	 */
 	@Override
 	public void delete(Object object) {
@@ -47,7 +47,7 @@ public class BaseDaoImpl implements BaseDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.dao.BaseDao#update(java.lang.Object)
+	 * @see com.qhit.lh.g4.zhy.t4.dao.BaseDao#update(java.lang.Object)
 	 */
 	@Override
 	public void update(Object object) {
@@ -58,7 +58,7 @@ public class BaseDaoImpl implements BaseDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.dao.BaseDao#getObjectById(java.lang.Class, java.io.Serializable)
+	 * @see com.qhit.lh.g4.zhy.t4.dao.BaseDao#getObjectById(java.lang.Class, java.io.Serializable)
 	 */
 	@Override
 	public Object getObjectById(Class clazz, Serializable id) {
@@ -68,7 +68,7 @@ public class BaseDaoImpl implements BaseDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.qhit.lh.g4.perfact.t3.dao.BaseDao#queryAll(java.lang.String)
+	 * @see com.qhit.lh.g4.zhy.t4.dao.BaseDao#queryAll(java.lang.String)
 	 */
 	@Override
 	public List<Object> queryAll(String sql) {

@@ -6,7 +6,7 @@
 <!-- Generated 2017-12-15 9:35:55 by Hibernate Tools 5.2.6.Final -->
 <hibernate-mapping>
 
-	<class name="com.qhit.lh.g4.perfact.t3.bean.TDept" table="t_dept"
+	<class name="com.qhit.lh.g4.zhy.T4.bean.TDept" table="t_dept"
 		optimistic-lock="version">
 
 		<id name="deptId" type="int">
@@ -28,7 +28,7 @@
 	
 	<set name="emps" lazy="false" cascade="save-update">
 		<key column="deptId"></key>
-		<one-to-many class="com.qhit.lh.g4.perfact.t3.bean.TEmp"/>
+		<one-to-many class="com.qhit.lh.g4.zhy.t4.bean.TEmp"/>
 	</set>
 	</class>
 
