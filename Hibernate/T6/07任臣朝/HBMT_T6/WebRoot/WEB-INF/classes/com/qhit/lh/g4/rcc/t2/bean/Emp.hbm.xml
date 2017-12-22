@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.rcc.t2.bean.Emp" table="t_emp"
+		schema="dbo" catalog="db_emp">
+		<!-- 主键映射 -->
+		<id name="eid" column="eid" type="java.lang.integer">
+			<column name="eid" />
+			<!-- 自增 -->
+			<generator class="native">
+			   <param name="native">emp_seq</param>
+			</generator>
+		</id>
+
+		<!-- 普通成员 -->
+		<property name="empName" type="java.lang.String">
+			<column name="empName" length="25" not-null="true" />
+		</property>
+		<property name="empSex" type="java.lang.String">
+			<column name="empSex" length="1" not-null="true" />
+		</property>
+		<property name="birthday" type="java.lang.String">
+			<column name="birthday" length="25" not-null="true" />
+		</property>
+		<property name="deptId" type="java.lang.String" insert="false" update="false 	">
+			<column name="deptId" not-null="true" />
+		</property>
+		<!-- 一对一 -->
+		<one-to-one name="userInfo" class="com.qhit.lh.g4.rcc.t2.bean.UserInfo" cascade="all"></one-to-one>
+		<many-to-one name="dept" class="com.qhit.lh.g4.rcc.t2.bean.UserInfo" column="deptId" lazy="false"></many-to-one>
+	</class>
+</hibernate-mapping>
