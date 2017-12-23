@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping> 
+  <class name="com.qhit.lh.g4.jer.sbm.bean.User" table="t_sbm" schema="dbo" catalog="db_sbm">
+    <id name="userId" type="integer">
+      <column name="eid" />
+      <generator class="native"></generator>
+    </id>
+    <property name="userName" column="userName" type="string"></property>
+    <property name="userPassword" column="userPassword" type="string"></property>
+    <property name="userSex" column="userSex" type="string"></property>
+    <property name="userAge" column="userAge" type="integer"></property>
+    <property name="telephone" column="telephone" type="string"></property>
+    <property name="address" column="address" type="string"></property>
+    <property name="pic" column="pic" type="string"></property>
+  </class>
+</hibernate-mapping>
