@@ -1,4 +1,4 @@
-package com.qhit.lh.g4.wcx.t6.bean;
+package com.qhit.lh.g4.wcx.t8.bean;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,22 +10,21 @@ public class Dept {
 	
 	private Set<Emp> emps = new HashSet<>();
 	
-	public Dept() {
-		super();
+	public Set<Emp> getEmps() {
+		return emps;
 	}
-	
+	public void setEmps(Set<Emp> emps) {
+		this.emps = emps;
+	}
 	public Dept(int deptId, String deptName, String deptAdress) {
 		super();
 		this.deptId = deptId;
 		this.deptName = deptName;
 		this.deptAdress = deptAdress;
 	}
-	
-	public Set<Emp> getEmps() {
-		return emps;
-	}
-	public void setEmps(Set<Emp> emps) {
-		this.emps = emps;
+	public Dept() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	public int getDeptId() {
 		return deptId;

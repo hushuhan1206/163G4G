@@ -1,4 +1,4 @@
-package com.qhit.lh.g4.wcx.t6.bean;
+package com.qhit.lh.g4.wcx.t7.bean;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,8 +12,8 @@ public class Dept {
 	
 	public Dept() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	
 	public Dept(int deptId, String deptName, String deptAdress) {
 		super();
 		this.deptId = deptId;
