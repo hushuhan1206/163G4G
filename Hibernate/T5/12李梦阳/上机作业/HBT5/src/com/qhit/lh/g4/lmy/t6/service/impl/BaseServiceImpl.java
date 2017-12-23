@@ -10,11 +10,7 @@ import com.qhit.lh.g4.lmy.t6.dao.DaseDao;
 import com.qhit.lh.g4.lmy.t6.dao.impl.DaseDaoImpl;
 import com.qhit.lh.g4.lmy.t6.service.DaseService;
 
-/**
- * @author 万曦晖
- *TODO
- *2017年12月20日下午4:50:40
- */
+
 public class BaseServiceImpl implements DaseService{
 	private DaseDao userDao = new DaseDaoImpl();
 

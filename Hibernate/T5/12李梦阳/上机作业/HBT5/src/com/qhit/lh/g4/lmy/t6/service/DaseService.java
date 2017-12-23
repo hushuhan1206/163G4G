@@ -6,11 +6,7 @@ package com.qhit.lh.g4.lmy.t6.service;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * @author 万曦晖
- *TODO
- *2017年12月20日下午3:53:13
- */
+
 public interface DaseService {
 	//添加
 	public void add(Object obj);

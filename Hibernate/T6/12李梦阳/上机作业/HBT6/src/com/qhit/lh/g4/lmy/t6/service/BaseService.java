@@ -1,13 +1,10 @@
-/**
- * 
- */
-package com.qhit.lh.g4.lmy.t6.dao;
+package com.qhit.lh.g4.lmy.t6.service;
 
 import java.io.Serializable;
 import java.util.List;
 
 
-public interface DaseDao {
+public interface BaseService {
 	//添加
 	public void add(Object obj);
 	//删除

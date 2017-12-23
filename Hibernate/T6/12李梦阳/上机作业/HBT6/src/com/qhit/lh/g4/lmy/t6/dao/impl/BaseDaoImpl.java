@@ -1,21 +1,18 @@
-/**
- * 
- */
 package com.qhit.lh.g4.lmy.t6.dao.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
-import com.qhit.lh.g4.lmy.t6.dao.DaseDao;
-import com.qhit.lh.g4.perfact.t6.util.HibernateSessionFactory;
+import com.qhit.lh.g4.lmy.t6.dao.BaseDao;
+import com.qhit.lh.g4.lmy.t6.utils.HibernateSessionFactory;
 
 
-public class DaseDaoImpl implements DaseDao {
 
+public class BaseDaoImpl implements BaseDao {
 	@Override
 	public void add(Object obj) {
 		// TODO Auto-generated method stub
@@ -26,9 +23,6 @@ public class DaseDaoImpl implements DaseDao {
         //操作对象
 		session.save(obj);
         //提交事务
-		tx.commit();
-        //关闭session
-		HibernateSessionFactory.closeSession();			
 	}
 
 	@Override
