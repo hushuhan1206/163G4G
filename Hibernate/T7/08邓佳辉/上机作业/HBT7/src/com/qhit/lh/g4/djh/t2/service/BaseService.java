@@ -1,0 +1,14 @@
+package com.qhit.lh.g4.djh.t2.service;
+
+import java.util.List;
+
+import com.qhit.lh.g4.djh.t2.bean.Emp;
+
+public interface BaseService {
+	public void add(Object obj);
+	public void delete(Object obj);
+	public void update(Object obj);
+	public Object getObjectById(Class clazz,int id);
+	public List<Object> queryAll(String tableName);
+	public List<Emp> getEmpByName(String name);
+}
