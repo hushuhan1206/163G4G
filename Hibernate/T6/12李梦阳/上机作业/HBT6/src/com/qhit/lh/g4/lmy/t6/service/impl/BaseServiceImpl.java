@@ -1,23 +1,16 @@
-/**
- * 
- */
 package com.qhit.lh.g4.lmy.t6.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.qhit.lh.g4.lmy.t6.dao.DaseDao;
-import com.qhit.lh.g4.lmy.t6.dao.impl.DaseDaoImpl;
-import com.qhit.lh.g4.lmy.t6.service.DaseService;
 
-/**
- * @author 万曦晖
- *TODO
- *2017年12月20日下午4:50:40
- */
-public class BaseServiceImpl implements DaseService{
-	private DaseDao userDao = new DaseDaoImpl();
 
+import com.qhit.lh.g4.lmy.t6.dao.BaseDao;
+import com.qhit.lh.g4.lmy.t6.dao.impl.BaseDaoImpl;
+import com.qhit.lh.g4.lmy.t6.service.BaseService;
+
+public class BaseServiceImpl implements BaseService {
+	private BaseDao userDao = new BaseDaoImpl();
 	@Override
 	public void add(Object obj) {
 		// TODO Auto-generated method stub
@@ -51,5 +44,4 @@ public class BaseServiceImpl implements DaseService{
 		// TODO Auto-generated method stub
 		return userDao.getObjectById(clazz, id);
 	}
-
 }
