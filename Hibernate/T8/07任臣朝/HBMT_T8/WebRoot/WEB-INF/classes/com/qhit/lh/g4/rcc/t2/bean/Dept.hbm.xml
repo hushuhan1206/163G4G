@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.g4.rcc.t2.bean.UserInfo" table="t_dept"
+		schema="dbo" catalog="db_emp">
+		<id name="deptId" type="java.lang.Integer">
+			<column name="daptId" />
+			<generator class="native">
+			  <param name="native">dept_seq</param>
+			</generator>
+		</id>
+		<property name="deptName" type="java.lang.String">
+			<column name="deptName" length="25" not-null="true" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="address" length="25" />
+		</property>
+		<set name="emps" lazy="false" cascade="save-update" sort="unsorted" inverse="true">
+		    <key column="deptid"></key> 
+		    <one-to-many class="com.qhit.lh.g4.rcc.t2.bean.Emp" />
+		</set>
+	</class>
+</hibernate-mapping>
