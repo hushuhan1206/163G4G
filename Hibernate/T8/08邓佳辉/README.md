@@ -1,1 +1,0 @@
-##Hibernate 第8章QBC查询作业

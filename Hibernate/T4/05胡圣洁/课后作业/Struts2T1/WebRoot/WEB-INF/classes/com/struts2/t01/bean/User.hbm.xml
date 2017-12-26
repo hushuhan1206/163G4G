@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+  <class name="com.struts2.t01.bean.user" table="t_user">
+		<id name="uid" column="uid" type="integer">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="uname" column="uname" type="string"></property>
+		<property name="upwd" column="upwd" type="string"></property>
+		<property name="edu" column="edu" type="string"></property>
+		<property name="sex" column="sex" type="integer"></property>
+	</class>
+</hibernate-mapping>
